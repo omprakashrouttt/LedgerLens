@@ -230,3 +230,41 @@ You can explain the project like this:
 - The dashboard supports both CSV and ZIP uploads.
 - The current fraud/risk logic is rule-based and can later be upgraded with machine learning.
 
+## Merged User/Admin Flow
+
+The final merged project is located at:
+
+```text
+/Users/omprakashrouttt/Downloads/ledgerlens
+```
+
+The login page separates two roles:
+
+- User Login: users can sign up with any name, email, and password. User accounts are stored in browser local storage for demo purposes.
+- Admin Login: use the demo admin credentials below.
+
+```text
+Email: admin@ledgerlens.com
+Password: admin123
+```
+
+After user login, the app opens the user dashboard. The user can upload `demo_transactions.csv` or a ZIP/CSV file, then view total spending, average transaction value, category spending, amount over time, and risky transactions.
+
+After admin login, the app opens the admin dashboard. The admin can load the merged database summary and ask fraud analytics questions such as:
+
+```text
+fraud rate by category
+top states with highest fraud rate
+fraud transactions by gender
+fraud rate by merchant
+```
+
+The merged backend now supports:
+
+```text
+POST /upload
+GET /api/admin/summary
+POST /api/admin/chat
+```
+
+The app also includes a floating help assistant. It can explain login, upload, backend startup, admin credentials, Google OAuth, and demo flow.
